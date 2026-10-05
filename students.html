@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>EduManage | Student Directory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { "primary": "#004ac6" }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#f8f9ff] font-sans">
+    <aside class="fixed left-0 top-0 h-full w-72 bg-white shadow-md z-50 flex flex-col">
+        <div class="h-16 px-6 flex items-center gap-3">
+            <img src="logo.svg" alt="Logo" class="h-8">
+            <span class="font-bold text-primary text-lg">EduManage</span>
+        </div>
+        <nav class="mt-6 px-4 space-y-1">
+            <a href="index.html" class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition">
+                <span class="material-symbols-outlined">grid_view</span> Dashboard
+            </a>
+            <a href="students.html" class="flex items-center gap-3 px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold">
+                <span class="material-symbols-outlined">school</span> Students
+            </a>
+        </nav>
+    </aside>
+
+    <main class="pl-72 p-8">
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900 tracking-tight">Student Information System</h1>
+                <p class="text-gray-500">Directory of verified enrollments and academic standing.</p>
+            </div>
+            <div class="flex gap-3">
+                <button class="bg-white border px-4 py-2 rounded-lg text-sm font-medium">Export CSV</button>
+                <button class="bg-primary text-white px-6 py-2 rounded-lg font-semibold shadow-md">+ Register Student</button>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+            <table class="w-full text-left">
+                <thead class="bg-gray-50 text-gray-500 text-xs uppercase font-bold">
+                    <tr>
+                        <th class="px-6 py-4">Student ID</th>
+                        <th class="px-6 py-4">Name</th>
+                        <th class="px-6 py-4">Department</th>
+                        <th class="px-6 py-4">Attendance</th>
+                        <th class="px-6 py-4">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y text-sm">
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 font-mono text-blue-600">STU-2024-0891</td>
+                        <td class="px-6 py-4 font-bold">Maya Lin-Vance</td>
+                        <td class="px-6 py-4">CS & AI Systems</td>
+                        <td class="px-6 py-4">98.2%</td>
+                        <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">Cleared</span></td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 font-mono text-blue-600">STU-2024-1011</td>
+                        <td class="px-6 py-4 font-bold">Amara N. Okafor</td>
+                        <td class="px-6 py-4">Accelerated Science</td>
+                        <td class="px-6 py-4">71.0%</td>
+                        <td class="px-6 py-4"><span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-bold">Overdue</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
